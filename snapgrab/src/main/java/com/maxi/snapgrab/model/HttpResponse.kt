@@ -1,3 +1,11 @@
 package com.maxi.snapgrab.model
 
-data class HttpResponse()
+import java.io.InputStream
+
+data class HttpResponse(
+    val responseCode: Int,
+    val totalBytes: Long,
+    val contentLength: Long,
+    val inputStream: InputStream,
+    val supportsResume: Boolean
+)
